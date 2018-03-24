@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Spark, Python, Java, Java Web" />
+  <meta name="keywords" content="Python," />
 
 
 
@@ -79,17 +79,21 @@
 
 
 
-<meta name="description" content="玉汝于成">
+<meta name="description" content="代码说明：【python版本：2.7】数据集输出txt文件格式：">
+<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content=" Python数据统计脚本">
 <meta property="og:url" content="http://yuming226.github.io/2018/03/24/Python数据统计脚本/index.html">
 <meta property="og:site_name" content="Mr-Minh&#39;s blog">
-<meta property="og:description" content="玉汝于成">
+<meta property="og:description" content="代码说明：【python版本：2.7】数据集输出txt文件格式：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-24T04:36:18.032Z">
+<meta property="og:image" content="http://yuming226.github.io/images/Data-Image1.png">
+<meta property="og:image" content="http://yuming226.github.io/images/Data-Image2.png">
+<meta property="og:updated_time" content="2018-03-24T05:22:17.728Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=" Python数据统计脚本">
-<meta name="twitter:description" content="玉汝于成">
+<meta name="twitter:description" content="代码说明：【python版本：2.7】数据集输出txt文件格式：">
+<meta name="twitter:image" content="http://yuming226.github.io/images/Data-Image1.png">
 
 
 
@@ -340,6 +344,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -367,7 +393,9 @@
       
 
       
-        
+        <p>代码说明：【python版本：2.7】<br>数据集输出txt文件格式：<br><a id="more"></a><br><img src="/images/Data-Image1.png"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">#!/etc/bin/python</span><br><span class="line">#coding:utf-8</span><br><span class="line">#glob模块是用来查找匹配的文件的,在查找的条件中，需要用到Unix shell中的匹配规则：</span><br><span class="line">import glob</span><br><span class="line">#代码实现函数DataResult()</span><br><span class="line">def DataResult():</span><br><span class="line">    #读取该目录下的所有txt文件</span><br><span class="line">    FileNameList = glob.glob(&quot;./*.txt&quot;)</span><br><span class="line">    #输入文件</span><br><span class="line">    Ouput_File= open(&apos;output/Result.txt&apos;,&apos;w&apos;)</span><br><span class="line">    #下面做测试代码</span><br><span class="line">    #print FileNameList</span><br><span class="line">    #f = open(&quot;vrpnc1_30000_1.txt&quot;)</span><br><span class="line">    #lines = f.readlines()</span><br><span class="line">    #print(type(lines))</span><br><span class="line">    #print(lines[-1])</span><br><span class="line">    #由于我们要统计十个txt文件的数据，因此用index变量来判断是否统计十个文件</span><br><span class="line">    index = 0</span><br><span class="line">    #Time和Costs为了统计时间和花销，为统计十个文件后，Time和Costs要重新赋值为0</span><br><span class="line">    Time = 0</span><br><span class="line">    Costs = 0</span><br><span class="line">    #注：tmp的设置要大于所有要统计的Costs的值</span><br><span class="line">    tmp = 100000</span><br><span class="line">    Ouput_File.write(&quot;\t\t&quot; + &quot;Good_Costs&quot; + &quot;\t\t&quot; + &quot;Average_Costs&quot; +&quot;\t\t&quot; +&quot;Average_Time&quot;+&quot;\n\n&quot;)</span><br><span class="line">    #读取FileNameList列表中的每个文件</span><br><span class="line">    for File in FileNameList:</span><br><span class="line">        #测试每个数据集结果十个文件是否连续出现</span><br><span class="line">        #print File[2:9]</span><br><span class="line">        #由于我们要统计十个txt文件的数据，因此用index变量来判断是否统计十个文件</span><br><span class="line">        index = index + 1</span><br><span class="line">        with open(File, &apos;r&apos;) as file:</span><br><span class="line">        #读取某个txt文件的全部内容</span><br><span class="line">            Lines_Content = file.readlines()</span><br><span class="line">            #下面做测试代码</span><br><span class="line">            #print(Lines_Content)</span><br><span class="line">            #print File[2:8]</span><br><span class="line">            #for line in Lines_Content:</span><br><span class="line">                #print line</span><br><span class="line">            #print(Lines_Content[-2])</span><br><span class="line">            #print(Lines_Content[-1])</span><br><span class="line">            #收集文件中的时间和花销</span><br><span class="line">            Cost = float(Lines_Content[-1])</span><br><span class="line">            Time = Time + float(Lines_Content[-2])</span><br><span class="line">            Costs = Costs + Cost</span><br><span class="line">            #统计Costs最小的值</span><br><span class="line">            if(Cost&lt;tmp):</span><br><span class="line">                tmp=Cost</span><br><span class="line">            #遍历十个文件后做一次输出操作，并将Time、Costs设置为0.注：tmp的设置要大于所有要统计的Costs的值</span><br><span class="line">            if(index % 10 == 0):</span><br><span class="line">                Ouput_File.write(File[2:9] + &quot;:&quot;+str(tmp)+&quot;\t&quot;+str(Costs/10)+&quot;\t\t&quot;+str(Time/10.00)+&quot;\n\n&quot;)</span><br><span class="line">                Time = 0</span><br><span class="line">                Costs = 0</span><br><span class="line">                tmp = 100000</span><br><span class="line">            #print type(Time)</span><br><span class="line">            #print type(Cost)</span><br><span class="line"></span><br><span class="line">        file.close()</span><br><span class="line">def main():</span><br><span class="line">    DataResult()</span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure></p>
+<p><strong>效果：</strong><br><img src="/images/Data-Image2.png"></p>
+
       
     </div>
     
@@ -410,6 +438,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+        </div>
       
 
       
@@ -515,7 +549,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -526,7 +560,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
